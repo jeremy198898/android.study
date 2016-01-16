@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zzd.hit.activities.MainPageActivity">
+
+    <!-- toolbar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_part">
+        <include
+            layout="@layout/toolbar"
+            android:id="@+id/toolbar_main_page_area"/>
+    </RelativeLayout>
+
+    <!-- viewpager part -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_part"
+        android:layout_above="@+id/strait_line">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/main_content">
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- strait line -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/toolbar"
+        android:id="@+id/strait_line"
+        android:layout_above="@+id/radio_group">
+    </RelativeLayout>
+
+
+    <!-- bottom navigation bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/radio_group">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bottom_navigation"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:button="@null"
+                android:checked="false"
+                android:drawableTop="@drawable/tab_contact"
+                android:gravity="center_horizontal|bottom"
+                android:text="Contact"
+                android:textSize="10dp"/>
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:button="@null"
+                android:checked="false"
+                android:drawableTop="@drawable/tab_order"
+                android:gravity="center_horizontal|bottom"
+                android:text="Order"
+                android:textSize="10dp"/>
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:button="@null"
+                android:checked="false"
+                android:drawableTop="@drawable/tab_order"
+                android:gravity="center_horizontal|bottom"
+                android:text="Order"
+                android:textSize="10dp"/>
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:button="@null"
+                android:checked="false"
+                android:drawableTop="@drawable/tab_system"
+                android:gravity="center_horizontal|bottom"
+                android:text="System"
+                android:textSize="10dp"/>
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
